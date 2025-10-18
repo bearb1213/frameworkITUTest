@@ -3,7 +3,7 @@
 # Build script simplifié pour le projet
 PROJECT_NAME="frame"
 WAR_FILE="$PROJECT_NAME.war"
-BUILD_DIR="build"
+BUILD_DIR="target"
 WEBAPP_DIR="webapp"
 SRC_DIR="src"
 LIB_DIR="lib"
