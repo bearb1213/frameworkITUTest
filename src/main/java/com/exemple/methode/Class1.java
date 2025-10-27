@@ -1,7 +1,9 @@
 package com.exemple.methode;
 
 import com.frame.annotation.GetMapping;
+import com.frame.annotation.Controller;
 
+@Controller
 public class Class1 {
 
     public Class1(){}
