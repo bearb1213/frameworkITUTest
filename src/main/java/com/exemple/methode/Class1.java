@@ -1,6 +1,7 @@
 package com.exemple.methode;
 
 import com.frame.annotation.GetMapping;
+import com.frame.annotation.PostMapping;
 import com.frame.annotation.Controller;
 
 @Controller
@@ -13,7 +14,7 @@ public class Class1 {
         return 0;
     }
 
-    @GetMapping("/double")
+    @PostMapping("/double")
     public double getDouble(){
         return 0.;
     }

@@ -1,7 +1,8 @@
 package com.exemple.main;
 
-import com.frame.annotation.GetMapping;
+import com.frame.annotation.Mapping;
 import com.frame.annotation.AnnotationGetteur;
+import com.frame.annotation.Mapping;
 
 import java.lang.reflect.Method;
 import java.util.List;
@@ -14,12 +15,17 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            List<GetMapping> gets = AnnotationGetteur.getAllGetMapping("com.exemple.methode");
-            System.out.println("\n\n\n\nGet Mapping : ");
-            for (GetMapping get : gets) {
-                System.out.println("url : "+get.value());
-            }
-            
+            // List<Mapping> mappings = AnnotationGetteur.getAllMapping("com.exemple");
+            // for (Mapping mapping : mappings) {
+            //     System.out.println("class : "+mapping.getClazz().getName() + " ; method : " + mapping.getMethod().getName() + " ; Path : " + mapping.getPath() + " ; Type annotation : "+mapping.getAnnotation());
+            // }
+         
+            // for(Class<?> clazz : AnnotationGetteur.getAllClassesController("com.exemple" )){
+            //     if (clazz.isAnnotationPresent(com.frame.annotation.Controller.class)) {
+            //         System.out.println("misy ");
+            //     }
+            //     System.out.println(clazz.getName());
+            // }
         } catch (Exception e) {
             e.printStackTrace();
         }

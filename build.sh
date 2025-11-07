@@ -10,7 +10,7 @@ LIB_DIR="lib"
 WEB_INF_DIR="$WEBAPP_DIR/WEB-INF"
 
 # Configuration Tomcat (modifier selon votre installation)
-TOMCAT_WEBAPPS_DIR="/home/mrtsila/Documents/apache-tomcat-10.1.46/webapps"
+TOMCAT_WEBAPPS_DIR="/home/mrtsila/Documents/serveur/apache-tomcat-10.1.46/webapps"
 
 echo "=== Construction du projet $PROJECT_NAME ==="
 
@@ -27,6 +27,11 @@ mkdir -p "$BUILD_DIR/WEB-INF/lib"
 # Copier les fichiers web (HTML, JSP, images, etc.)
 echo "Copie des fichiers web..."
 cp -r "$WEBAPP_DIR"/* "$BUILD_DIR/" 2>/dev/null || true
+
+# Copier les fichiers resources
+if [ -d "src/main/resources" ]; then
+    cp -r "src/main/resources"/* "$BUILD_DIR/WEB-INF/" 2>/dev/null || true
+fi
 
 # Copier les librairies
 echo "Copie des librairies..."
