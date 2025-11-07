@@ -18,4 +18,9 @@ public class Class1 {
     public double getDouble(){
         return 0.;
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "test reussi";
+    }
 }

@@ -1,8 +1,7 @@
 package com.exemple.main;
 
-import com.frame.annotation.Mapping;
 import com.frame.annotation.AnnotationGetteur;
-import com.frame.annotation.Mapping;
+import com.frame.model.Mapping;
 
 import java.lang.reflect.Method;
 import java.util.List;
