@@ -18,4 +18,5 @@ public class Class2 {
     public String testGet2(){
         return "testget1";
     }
+    
 }

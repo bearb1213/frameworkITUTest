@@ -1,11 +1,23 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exemple JSP</title>
 </head>
 <body>
-    <h1>Hello word</h1>
+    <h1>Hello world</h1>
+
+    <p>
+        <% 
+            String test = (String) request.getAttribute("test");
+            if (test != null) {
+                out.print(test);
+            } else {
+                out.print("Aucune donnée trouvée !");
+            }
+        %>
+    </p>
 </body>
 </html>
