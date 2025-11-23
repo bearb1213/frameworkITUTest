@@ -32,4 +32,12 @@ public class Class1 {
         
         return mv;
     }
+    @GetMapping("/essaie/{id}/{exemple}")
+    public ModelView essai(){
+        ModelView mv = new ModelView("aa.jsp");
+        mv.addAttribute("test", "hahaha");
+        
+        return mv;
+    }
+
 }

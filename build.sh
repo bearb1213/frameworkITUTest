@@ -10,7 +10,7 @@ LIB_DIR="lib"
 WEB_INF_DIR="$WEBAPP_DIR/WEB-INF"
 
 # Configuration Tomcat (modifier selon votre installation)
-TOMCAT_WEBAPPS_DIR="/home/mrtsila/Documents/serveur/apache-tomcat-10.1.46/webapps"
+TOMCAT_WEBAPPS_DIR="/home/tsila/Documents/S5/serveur/apache-tomcat-10.1.49/webapps"
 
 echo "=== Construction du projet $PROJECT_NAME ==="
 
