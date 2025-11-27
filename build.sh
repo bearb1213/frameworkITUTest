@@ -66,7 +66,7 @@ if [ -d "$SRC_DIR" ]; then
     # Compiler les fichiers Java
     find "$SRC_DIR" -name "*.java" > sources.txt
     if [ -s sources.txt ]; then
-        javac -cp "$CLASSPATH" -d "$BUILD_DIR/WEB-INF/classes" @sources.txt
+        javac -cp "$CLASSPATH" -parameters -d "$BUILD_DIR/WEB-INF/classes" @sources.txt
         if [ $? -eq 0 ]; then
             echo "Compilation réussie"
         else

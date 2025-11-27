@@ -21,7 +21,7 @@ fi
 echo "Classpath: $CLASSPATH"
 
 # Compile
-find $SRC_DIR -name "*.java" | xargs javac -d $BUILD_DIR -cp $CLASSPATH
+find $SRC_DIR -name "*.java" | xargs javac -d $BUILD_DIR -parameters -cp $CLASSPATH 
 
 if [ $? -eq 0 ]; then
     echo "Build successful!"
