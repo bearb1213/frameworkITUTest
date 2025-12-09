@@ -2,9 +2,15 @@ package com.exemple.methode;
 
 import com.frame.annotation.GetMapping;
 import com.frame.annotation.PostMapping;
+import com.frame.annotation.RequestMapping;
 import com.frame.annotation.RequestParam;
 import com.frame.model.ModelView;
+
+import java.util.Map;
+
 import com.frame.annotation.Controller;
+
+import com.exemple.model.Employe;
 
 @Controller
 public class Class1 {
@@ -64,5 +70,38 @@ public class Class1 {
         
         return mv;
     }
+
+
+    @GetMapping("/testmap")
+    public ModelView map(){
+        ModelView mv = new ModelView("/resultMap.jsp");
+
+        return mv;
+    }
+
+    @PostMapping("/testmap")
+    public ModelView map(Map<String , Object> maps){
+        ModelView mv = new ModelView("/resultMap.jsp");
+        mv.addAttribute("map", maps);
+
+        return mv;
+    }
+
+    @GetMapping("/objetTest")
+    public ModelView obj(){
+        ModelView mv = new ModelView("/objForm1.jsp");
+        
+        return mv;
+    }
+
+    @PostMapping("/objetTest")
+    public ModelView obj(Employe emp){
+        ModelView mv = new ModelView("/objForm1.jsp");
+        
+        mv.addAttribute("emp", emp);
+
+        return mv;
+    }
+
 
 }
