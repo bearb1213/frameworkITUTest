@@ -1,16 +1,18 @@
 package com.exemple.model;
 
+import java.util.ArrayList;
+
 public class Employe {
     private String nom;
     private Integer age;
-    private Double salaire;
+    private ArrayList<Salaire> salaires;
 
     public Employe (){}
 
-    public Employe (String nom,Integer age,Double salaire){
+    public Employe (String nom,Integer age,ArrayList<Salaire> salaires){
         this.nom=nom;
         this.age=age;
-        this.salaire=salaire;
+        this.salaires=salaires;
     }
 
     public String getNom(){
@@ -27,11 +29,11 @@ public class Employe {
         this.age=age;
     }
 
-    public Double getSalaire(){
-        return salaire;
+    public ArrayList<Salaire> getSalaires(){
+        return salaires;
     }
-    public void setSalaire(Double salaire){
-        this.salaire=salaire;
+    public void setSalaires(ArrayList<Salaire> salaires){
+        this.salaires=salaires;
     }
 
 }
